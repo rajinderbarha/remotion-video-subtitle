@@ -1,3 +1,5 @@
 .video_main{
   height: 80vh !important;
+  aspect-ratio: 9 / 16!important;
+  width: 100%!important;
 }
