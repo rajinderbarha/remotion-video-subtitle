@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Player } from "@remotion/player";
+import VideoPlayer from "./components/VideoPlayer";
+import React from "react";
+import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className="App">
+    <h1 className="text-center font-bold text-3xl mb-4">Remotion video player with captions</h1>
+    <div className="video-container w-fit mx-auto">
+      <Player 
+        component={VideoPlayer}
+        durationInFrames={900}
+        fps={21}
+        compositionWidth={430}
+        compositionHeight={932}
+        controls
+        className="video_main h-full bg-black"
+      />
     </div>
-  );
+   </div>
+  )
 }
 
 export default App;
